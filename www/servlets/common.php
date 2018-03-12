@@ -19,7 +19,7 @@
 		
 	}
 	
-if(1==1){
+if(1==2){
 	insertPost("Anika", "Evil in HOfstra");
 	$array = getPost();
 	print_r($array);
