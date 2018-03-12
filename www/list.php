@@ -22,7 +22,7 @@
 				var msg = post["msg"];
 				var ts = post["ts"];
 				var newCtrl = getControl(author,msg,ts);
-				$("container").append(newCtrl);
+				$("#container").append(newCtrl);
 				}
 								
 			}
