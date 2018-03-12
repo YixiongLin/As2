@@ -14,7 +14,7 @@
 			
 			    $.post("servlets/data_ops.php",
 			    {
-				op: "sumbit",
+				op: "sumbit"
 		
 				author: author,
 				location: msg,
