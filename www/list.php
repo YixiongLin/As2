@@ -9,7 +9,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script>
 		function getControl(author,msg,ts){
-			var newCtrl = $(<div class= 'row'><span id = 'author'></span> <span id = 'ts'> </span><br /> <span id = 'msg'></span></div> );
+			var newCtrl = $("<div class= 'row'><span id = 'author'></span> <span id = 'ts'> </span><br /> <span id = 'msg'></span></div>" );
 			newCtrl.find("#author").html(author);
 			newCtrl.find("#ts").html(ts);
 			newCtrl.find("#msg").html(msg);
