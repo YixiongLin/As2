@@ -8,7 +8,7 @@
 		$Post = secure($Post);
 
 
-		$q = "INSERT INTO elvistbl(author,Post ) VALUES ('$author','$Post')";
+		$q = "INSERT INTO elvistbl(author,msg) VALUES ('$Author','$Post')";
 		executeSQL($q);
 	}	
 
@@ -20,7 +20,7 @@
 	}
 	
 if(1==1){
-	insertPost("m2", "mini me");
+	insertPost("Anika", "Evil in HOfstra");
 	$array = getPost();
 	print_r($array);
 }
