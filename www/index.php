@@ -8,15 +8,18 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script>
-		function verifypwd(){
-			var uname = $("#txtUname").val();
-			var pwd = $("#txtPwd").val();
-			alert("verifypwd v2, uname: " + uname + 
-				"pwd: " + pwd);
-			    $.post("servlets/verifyPwd.php",
+		function submitpost(){
+			var author = $("#author").val();
+			var msg = $("msg").val();
+			
+			    $.post("servlets/data_ops.php",
 			    {
-				uname: uname,
-				pwd: pwd 
+				op: "sumbit"
+		
+				author: author,
+				location: msg,
+				time: ts, 
+
 			    },
 			    function(data, status){
 				if(data=="ok"){
@@ -31,9 +34,9 @@
 <body>
 
 <div class="container">
-	<input type="text" id="txtUname"> <br />
-	<input type="password" id="txtPwd"> <br />
-	<button id="btnSubmit" onclick="verifypwd()">Login</button>
+	<input type="author" id="author"> <br />
+	<input type="msg" id="msg"> <br />
+	<button id="btnSubmit" onclick="submitPost()"></button>
 
 </div>
 

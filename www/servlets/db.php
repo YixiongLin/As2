@@ -8,7 +8,7 @@
 		if (!$link) {
 		    throw new Exception("error: ".mysql_error());
 		}
-		mysql_select_db("elvisdb", $link);
+		mysql_select_db("db_users", $link);
 
 		//2. do it
 		$res = mysql_query($q, $link);
@@ -38,8 +38,8 @@
 //TEST CASES
 if(1==2){
 /*
-	executeSQL("INSERT INTO elvistbl(author, msg) VALUES ('Someone', 'Dr. Evil in Hofstra library')");
-	$arr = executeSQL("SELECT * FROM elvistbl");
+	executeSQL("INSERT INTO tbl_users(uname, pwd_hash, real_name) VALUES ('xfu', 'abc', 'evil')");
+	$arr = executeSQL("SELECT * FROM tbl_users");
 	print_r($arr);	
 */
 	print(secure("abc'abc"));
