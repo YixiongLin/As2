@@ -12,37 +12,29 @@
 			var author = $("#author").val();
 			var msg = $("msg").val();
 			
-			    $.post("servlets/data_ops.php",
+			    $.post("servlets/db_ops.php",
 			    {
 				op: "sumbitPost"
+
 		
 				author: author,
 				location: msg,
-				time: ts, 
+				 
 
-			    },
-			    function(data, status){
-				if(data=="ok"){
-					window.location = "inbox.php";
-				}else{
-					alert("ERROR!");
-				}
 			    });
 		}
 	</script>
 </head>
 <body>
 
-<div class="container">
-	<form action ="/list.php">
+<div class="container" action ="list.php">
 	Name: <br>
 	<input type="author" id="author"> <br />
 	Where is Dr.Evil<br>
 	<input type="msg" id="msg"> <br />
-	<input type="time" id="ts"><br />
 	Click to report:
-	<button id="btnSubmit" onclick="submitPost()"></button>
-	</form>
+	<button id="btnSubmit" onclick="document.getELementById('author', 'msg').innerHTML=submitPost()">Click to report</button>
+	
 </div>
 
 </body>
